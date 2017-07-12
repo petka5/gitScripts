@@ -1,2 +1,4 @@
-# File with example script commands
+# File with example scripts commands
 ### git section
+-- show git objects sorted by size
+find .git/objects/ -type f -exec ls -lh {} + | sort
