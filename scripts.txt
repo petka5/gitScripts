@@ -2,3 +2,8 @@
 ### git section
 -- show git objects sorted by size
 find .git/objects/ -type f -exec ls -lh {} + | sort
+git merge-base master refs/remotes/tags/tagv1
+
+## svn find from which revision tag/branch was created
+svn log --verbose --stop-on-copy $REPOSITORY/branches/feature
+git svn find-rev --before r32223
